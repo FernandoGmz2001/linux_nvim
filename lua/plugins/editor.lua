@@ -10,8 +10,7 @@ return {
     },
   },
   {
-    "stevearc/oil.nvim",
-    opts = {},
+    "stevearc/oil.nvim", opts = {},
     dependencies = { { "echasnovski/mini.icons", opts = {} } },
     vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" }),
   },
@@ -186,9 +185,9 @@ return {
   },
   { "tpope/vim-fugitive" ,
     vim.keymap.set('n', '<leader>gd', ':Gvdiffsplit<CR>'),
-    vim.keymap.set('n', '<leader>ga', ':Git add .'),
+    vim.keymap.set('n', '<leader>ga', ':Git add .<CR>'),
     vim.keymap.set('n', '<leader>gc', ':Git commit -m'),
-    vim.keymap.set('n', '<leader>gp', ':Git push')
+    vim.keymap.set('n', '<leader>gp', ':Git push<CR>')
   },
   -- Ahora yo te hare un cambio para que veas como funciona esto
 }
