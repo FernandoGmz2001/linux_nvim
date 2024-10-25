@@ -155,7 +155,6 @@ return {
     config = function()
       require("incline").setup()
     end,
-    -- Optional: Lazy load Incline
     event = "VeryLazy",
   },
   {
@@ -185,5 +184,11 @@ return {
       require("gitsigns").setup()
     end,
   },
-  { "tpope/vim-fugitive" },
+  { "tpope/vim-fugitive" ,
+    vim.keymap.set('n', '<leader>gd', ':Gvdiffsplit<CR>'),
+    vim.keymap.set('n', '<leader>ga', ':Git add .'),
+    vim.keymap.set('n', '<leader>gc', ':Git commit -m'),
+    vim.keymap.set('n', '<leader>gp', ':Git push')
+  },
+  -- Ahora yo te hare un cambio para que veas como funciona esto
 }
