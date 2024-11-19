@@ -10,7 +10,8 @@ return {
     },
   },
   {
-    "stevearc/oil.nvim", opts = {},
+    "stevearc/oil.nvim",
+    opts = {},
     dependencies = { { "echasnovski/mini.icons", opts = {} } },
     vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" }),
   },
@@ -60,8 +61,7 @@ return {
             additional_args = { "--hidden" },
           })
         end,
-        desc =
-        "Search for a string in your current working directory and get results live as you type, respects .gitignore",
+        desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
       },
       {
         "\\\\",
@@ -101,6 +101,15 @@ return {
         ";s",
         function()
           local builtin = require("telescope.builtin")
+          builtin.treesitter({
+            no_ignore = false,
+            hidden = true,
+            sorting_strategy = "ascending",
+            layout_config = {
+              vertical = { width = 0.5 },
+              height = 40,
+            },
+          })
           builtin.treesitter()
         end,
         desc = "Lists Function names, variables, from Treesitter",
@@ -178,16 +187,38 @@ return {
   },
   { "echasnovski/mini.nvim", version = false },
   {
+    "echasnovski/mini.files",
+    version = false,
+    config = function()
+      require("mini.files").setup({
+        vim.keymap.set("n", "<leader>of", ":lua MiniFiles.open()<CR>"),
+        windows = {
+          -- Maximum number of windows to show side by side
+          max_number = math.huge,
+          -- Whether to show preview of file/directory under cursor
+          preview = true,
+          -- Width of focused window
+          width_focus = 50,
+          -- Width of non-focused window
+          width_nofocus = 15,
+          -- Width of preview window
+          width_preview = 25,
+        },
+      })
+    end,
+  },
+  {
     "lewis6991/gitsigns.nvim",
     config = function()
       require("gitsigns").setup()
     end,
   },
-  { "tpope/vim-fugitive" ,
-    vim.keymap.set('n', '<leader>gd', ':Gvdiffsplit<CR>'),
-    vim.keymap.set('n', '<leader>ga', ':Git add .<CR>'),
-    vim.keymap.set('n', '<leader>gc', ':Git commit -m'),
-    vim.keymap.set('n', '<leader>gp', ':Git push<CR>')
+  {
+    "tpope/vim-fugitive",
+    vim.keymap.set("n", "<leader>gd", ":Gvdiffsplit<CR>"),
+    vim.keymap.set("n", "<leader>ga", ":Git add .<CR>"),
+    vim.keymap.set("n", "<leader>gc", ":Git commit -m"),
+    vim.keymap.set("n", "<leader>gp", ":Git push<CR>"),
   },
   -- Ahora yo te hare un cambio para que veas como funciona esto
 }

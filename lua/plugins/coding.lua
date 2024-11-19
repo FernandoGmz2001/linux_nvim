@@ -11,8 +11,8 @@ return {
     config = function()
       require("nvim-ts-autotag").setup({
         opts = {
-          enable_close = true,           -- Auto close tags
-          enable_rename = true,          -- Auto rename pairs of tags
+          enable_close = true, -- Auto close tags
+          enable_rename = true, -- Auto rename pairs of tags
           enable_close_on_slash = false, -- Auto close on trailing </
         },
         per_filetype = {
@@ -70,10 +70,10 @@ return {
       "TmuxNavigatePrevious",
     },
     keys = {
-      { "<c-h>",  "<cmd><C-U>TmuxNavigateLeft<cr>" },
-      { "<c-j>",  "<cmd><C-U>TmuxNavigateDown<cr>" },
-      { "<c-k>",  "<cmd><C-U>TmuxNavigateUp<cr>" },
-      { "<c-l>",  "<cmd><C-U>TmuxNavigateRight<cr>" },
+      { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+      { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+      { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+      { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
   },
@@ -91,8 +91,8 @@ return {
           "vue",
           "svelte",
           "python",
-        },                              -- filetypes where the plugin is active
-        jsx_brackets = true,            -- must add brackets to JSX attributes
+        }, -- filetypes where the plugin is active
+        jsx_brackets = true, -- must add brackets to JSX attributes
         remove_template_string = false, -- remove backticks when there are no template strings
         restore_quotes = {
           normal = [[']],
