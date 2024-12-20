@@ -5,6 +5,7 @@ return {
   config = function()
     local alpha = require("alpha")
     local dashboard = require("alpha.themes.dashboard")
+    local startify = require("alpha.themes.startify")
 
     local time = os.date("%H:%M")
     local date = os.date("%a %d %b")

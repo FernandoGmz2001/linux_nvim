@@ -8,12 +8,13 @@ return {
     "MunifTanjim/nui.nvim",
   },
   keys = {
-    { "<leader>e", "<cmd>Neotree filesystem reveal toggle float<cr>", desc = "NeoTree" },
+    { "<leader>e", "<cmd>Neotree filesystem reveal toggle <cr>", desc = "NeoTree" },
   },
   opts = {
     view = { adaptive_size = true },
+    popup_border_style = "rounded",
     window = {
-      position = "left",
+      position = "float",
       -- width = 32
     }
   }

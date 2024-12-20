@@ -9,10 +9,30 @@ return {
     end,
   },
   {
-    "rebelot/kanagawa.nvim",
-    config = function ()
-    vim.cmd("colorscheme kanagawa")
+    "olimorris/onedarkpro.nvim",
+    priority = 1000, -- Ensure it loads first
+    config = function()
+      -- vim.cmd("colorscheme onedark_vivid")
     end
+  },
+  {
+    'marko-cerovac/material.nvim',
+    config = function()
+      -- vim.cmd("colorscheme material")
+    end
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    config = function()
       -- vim.cmd("colorscheme kanagawa")
+    end
+  },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+    config = function()
+      vim.cmd("colorscheme catppuccin")
+    end
   }
 }
