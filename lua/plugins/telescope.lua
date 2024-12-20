@@ -1,7 +1,7 @@
 return {
   'nvim-telescope/telescope.nvim',
   tag = '0.1.8',
-  lazy = false,
+  lazy = true,
   dependencies = {
     'nvim-lua/plenary.nvim',
     "nvim-telescope/telescope-file-browser.nvim",
@@ -60,17 +60,17 @@ return {
         theme = "ivy",
       },
       file_browser = {
-     --    mappings = {
-					-- 	-- your custom insert mode mappings
-					-- 	["n"] = {
-					-- 		-- your custom normal mode mappings
-					-- 		["N"] = require('telescope').extensions.file_browser.file_browser.actions.create,
-					-- 		["h"] = require('telescope').extensions.file_browser.file_browser.actions.goto_parent_dir,
-					-- 		["/"] = function()
-					-- 			vim.cmd("startinsert")
-					-- 		end,
-					-- 	},
-					-- },
+        --    mappings = {
+        -- 	-- your custom insert mode mappings
+        -- 	["n"] = {
+        -- 		-- your custom normal mode mappings
+        -- 		["N"] = require('telescope').extensions.file_browser.file_browser.actions.create,
+        -- 		["h"] = require('telescope').extensions.file_browser.file_browser.actions.goto_parent_dir,
+        -- 		["/"] = function()
+        -- 			vim.cmd("startinsert")
+        -- 		end,
+        -- 	},
+        -- },
       },
       buffers = {
         theme = "ivy",

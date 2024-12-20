@@ -1,6 +1,6 @@
 return {
   "tpope/vim-fugitive",
-  lazy = false,
+  lazy = true,
   keys = {
     { "<leader>gd", ":Gvdiff <CR>", desc = "Git diff" }
   }

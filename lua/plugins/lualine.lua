@@ -1,9 +1,10 @@
-    return {
-        "nvim-lualine/lualine.nvim",
-        opts = {
-            options = {
-                theme = "tokyonight",
-                  globalstatus = true,
-            },
-        },
-    }
+return {
+  "nvim-lualine/lualine.nvim",
+  lazy = false,
+  opts = {
+    options = {
+      theme = "tokyonight",
+      globalstatus = true,
+    },
+  },
+}

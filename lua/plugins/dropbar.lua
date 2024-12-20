@@ -1,6 +1,6 @@
 return {
   "Bekaboo/dropbar.nvim",
-  lazy = false,
+  lazy = true,
   enabled = false,
   config = function()
     require("lazy").setup({})
