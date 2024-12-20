@@ -2,8 +2,7 @@ return {
   "folke/zen-mode.nvim",
   opts = {
     window  = {
-      backdrop = 0.30,
-      width = 300,
+      width = 200,
     },
     plugins = {
       options = {
@@ -11,5 +10,5 @@ return {
       },
     }
   },
-  keys = { "<leader>z", ":ZenMode <CR>", desc = "ZenMode" },
+  -- keys = { "<leader>z", ":ZenMode <CR>", desc = "ZenMode" },
 }
